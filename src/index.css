@@ -13,7 +13,7 @@
 }
 
 .header {
-  flex: 1;
+  flex: 0.7;
 }
 
 .header > img {
@@ -23,16 +23,17 @@
 }
 
 .nav{
-  flex: 1;
+  flex: 1.3;
 }
 
 .nav > ul {
   padding-top: 25px;
   display: flex;
+  gap: 2px;
   justify-content: center;
   list-style-type: none;
   flex-wrap: wrap;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Poppins", serif;
   font-weight: 600;
   font-style: normal;
@@ -40,30 +41,33 @@
 }
 
 .nav > ul > li {
-  width: 150px;
+ 
+  width: 130px;
   text-decoration: none;
-  text-align: center; /* Center text in each item */
+  text-align: center; 
+
 }
 
-.nav > ul > li a {
-  color: white; /* Text color */
-  font-size: 18px; /* Font size */
-  font-weight: 600; /* Make the text bold */
-  padding: 5px; /* Add some space around the text */
-  display: block; /* Make the link fill the li area */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+.link {
+  color: black; 
+  font-size: 18px; 
+  font-weight: 600; 
+  padding: 5px; 
+  display: block; 
+  transition: all 0.3s ease; 
+  text-decoration: none;
 }
 
-/* Hover effect */
-.nav > ul > li a:hover {
-  background-color: #555; /* Slightly lighter background on hover */
-  border-radius: 5px; /* Rounded corners for the hover effect */
-  transform: translateY(-2px); /* Slight lift effect */
+.link:hover {
+  background-color: #555; 
+  color: #eee;
+  border-radius: 5px; 
+  transform: translateY(-2px); 
 }
 
-/* Active state for links (optional) */
+
 .nav > ul > li a:active {
-  background-color: #444; /* Darker on active click */
+  background-color: #444; 
 }
 
 
@@ -80,12 +84,15 @@ background-color: #495e57;
   color: #f4ce14;
 }
 .main > h2 {
+  line-height: 0.5rem;
+  Letter-spacing: 0.6rem;
   font-family: "Markazi Text", serif;
   font-size: 2rem;
   color: #eee;
 }
 
 .main > p {
+  padding-top: 2rem;
   max-width: 20rem;
   text-align: justify;
   font-family: "Poppins", serif;
@@ -102,9 +109,102 @@ background-color: #495e57;
 }
 
 .footer{
-  
+  display: flex;
+  font-family: "Poppins", serif;
+  border-top: 5px solid black;
+  padding-top: 2rem;
 }
 
+.image {
+  flex:1;
+}
+
+.image > img{
+  width:  30rem;
+  height: auto;
+}
+.navigation{
+  flex:1;
+   display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  align-items: flex-start;
+
+}
+
+.navigation > ul {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navigation > ul > li {
+cursor: pointer;
+}
+
+.navigation > h1 {
+  
+ font-size: 1.3rem;
+}
+
+.contact{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  align-items: flex-start;
+}
+
+.contact > ul {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.contact > ul > li {
+  cursor: pointer;
+  }
+
+.contact > h1 {
+  font-size: 1.3rem;
+  }
+
+  
+.social{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  align-items: flex-start;
+}
+
+.social > ul {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.social > ul > li {
+  cursor: pointer;
+  }
+
+.social > h1 {
+  font-size: 1.3rem;
+  }
+
+  
 @media (max-width: 768px) {
   .header-div{
     flex-direction: column;
@@ -113,6 +213,7 @@ background-color: #495e57;
   }
 
   .nav > ul {
+    
     padding-top: 5px;
     justify-content: center;
     gap: 1.2rem;
@@ -121,9 +222,37 @@ background-color: #495e57;
 
   .nav > ul > li {
     width: 140px; /* Adjust width on smaller screens */
+    border: 1px solid black;;
+    border-radius: 2rem;
+    cursor: pointer;
   }
+  .nav > ul > li:hover {
+background-color: rgb(225, 235, 133);
+  }
+
 
   .nav > ul > li a {
     font-size: 16px; /* Smaller font size on small screens */
   }
+  .footer{
+    flex-wrap: wrap;
+  }
+  .image{
+    display: flex;
+    justify-content: center;
+  }
+  .image > img{
+
+    width:  20rem;
+    height: auto;
+  }
+  .navigation > ul {
+    padding-left: 1rem;
+    }
+  .contact > ul {
+  padding-left: 1rem;
+  }
+  .social > ul {
+    padding-left: 1rem;
+    }
 }

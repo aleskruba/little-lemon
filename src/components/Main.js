@@ -2,7 +2,7 @@ import React from 'react'
 
 function Main() {
   return (
-    <div className='main'>
+    <main className='main'>
       <h1>Little Lemon</h1>
       <h2>Chicago</h2>
 
@@ -11,7 +11,7 @@ function Main() {
      </p>
 
      <button>Reserve a table</button>
-    </div>
+    </main>
   )
 }
 

@@ -1,24 +1,37 @@
 import React from 'react'
-
+import logo from  '../assets/logo.png'
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='footer' >
-        <div >
-
+        <div className='image'>
+             <img src={logo} alt="logo" /> 
         </div>
 
-        <div>
+        <div className='navigation'>
             <h1>Navigation</h1>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Menu</li>
-                <li>Reservations</li>
-                <li>Order Online</li>
-                <li>Login</li>
+            <li>
+                <Link className='link' to="/">Home</Link>
+            </li>
+            <li>
+                <Link className='link' to="/reservations">Reservations</Link>
+            </li>
+            <li>
+                <Link className='link' to="/menu">Menu</Link>
+            </li>
+            <li>
+                <Link className='link' to="/order">Order Online</Link>
+            </li>
+            <li>
+                <Link className='link' to="/about">About Us</Link>
+            </li>
+            <li>
+                <Link className='link' to="/login">Login</Link>
+            </li>
             </ul>
         </div>
-        <div>
+        <div className='contact'>
          <h1>Contact</h1>
             <ul>
                 <li>Phone Number</li>
@@ -26,7 +39,7 @@ function Footer() {
                 <li>Address</li>            
             </ul>
         </div>
-        <div>   
+        <div className='social'>
             <h1>Social Media
             </h1>
             <ul>
