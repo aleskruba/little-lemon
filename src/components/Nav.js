@@ -9,9 +9,6 @@ function Nav() {
     <Link className='link' to="/">Home</Link>
   </li>
   <li>
-    <Link className='link' to="/reservations">Reservations</Link>
-  </li>
-  <li>
     <Link className='link' to="/menu">Menu</Link>
   </li>
   <li>

@@ -1,22 +1,17 @@
 import React from 'react'
-import logo from  '../assets/logo.png'
+//import logo from  '../assets/logo.png'
 import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='footer' >
-        <div className='image'>
-             <img src={logo} alt="logo" /> 
-        </div>
-
+ 
         <div className='navigation'>
             <h1>Navigation</h1>
             <ul>
             <li>
                 <Link className='link' to="/">Home</Link>
             </li>
-            <li>
-                <Link className='link' to="/reservations">Reservations</Link>
-            </li>
+    
             <li>
                 <Link className='link' to="/menu">Menu</Link>
             </li>
@@ -48,7 +43,9 @@ function Footer() {
                 <li>Pinterest</li>  
             </ul>
         </div>
-        
+ {/*        <div className='image'>
+             <img src={logo} alt="logo" /> 
+        </div> */}
 
     </div>
   )
