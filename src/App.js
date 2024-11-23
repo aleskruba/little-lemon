@@ -11,7 +11,7 @@ import Confirmation from './components/Confirmation';
 function App() {
   return (
     <>
-      <header className='header-div' data-testid="header-div">
+      <header className='header-div' data-testid="header-div" id="header-div">
         <Header />
       </header>
       <nav>

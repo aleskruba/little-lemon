@@ -23,7 +23,7 @@ function BookingForm({
   };
 
   return (
-    <form className="form" onSubmit={submitForm}>
+    <form className="form" onSubmit={submitForm} >
       <label htmlFor="res-date">
         Choose date
         <span
@@ -77,16 +77,19 @@ function BookingForm({
         </span>
       </label>
       <input
-        type="text"
-        placeholder="number of guests"
+        type="number" // Updated to type "number" for better semantics
+        id="guests"   // Added the `id` to associate it correctly
         name="guests"
+        placeholder="number of guests"
         value={booking.guests}
         onChange={handleChange}
+        aria-required="true" // Add `aria-required` for accessibility
       />
-      {guestsLimit && <p className='limit'>Max guests is 12</p>}
+      {guestsLimit && <p className="limit">Max guests is 12</p>}
 
-      <label htmlFor="occasion">Occasion
-      <span
+      <label htmlFor="occasion">
+        Occasion
+        <span
           style={booking.occasion ? { background: 'green' } : { background: 'white' }}
           className="circle"
         >
@@ -94,6 +97,7 @@ function BookingForm({
         </span>
       </label>
       <select
+        id="occasion" // Ensure `id` is defined for correct association
         name="occasion"
         value={booking.occasion}
         onChange={handleChange}

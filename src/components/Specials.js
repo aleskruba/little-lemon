@@ -6,7 +6,7 @@ function Specials() {
 <div className="wrapper">
 
 {dishes.map((element,idx)=>(
-            <div className="box">
+            <div className="box" key={(element.id)}>
             <h2 className='title'>{element.title}</h2>
             <p className='description'>{element.description} </p>
           

@@ -22,7 +22,7 @@ function Main() {
     occasion: '',
   });
 
-  const navigate = useNavigate(); 
+ /*  const navigate = useNavigate();  */
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,7 +73,8 @@ function Main() {
       const response = await submitAPI(booking); 
       if (response) {
         localStorage.setItem('bookingDetails', JSON.stringify(booking));
-        navigate('/confirmation'); 
+        window.location.href = '/confirmation';
+
       } else {
         alert('Booking failed! Please try again.');
       }

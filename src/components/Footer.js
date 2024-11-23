@@ -43,9 +43,7 @@ function Footer() {
                 <li>Pinterest</li>  
             </ul>
         </div>
- {/*        <div className='image'>
-             <img src={logo} alt="logo" /> 
-        </div> */}
+
 
     </div>
   )
