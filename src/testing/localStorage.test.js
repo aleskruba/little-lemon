@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import Main from '../components/Main'; // Adjust the path if necessary
-import { MemoryRouter } from 'react-router-dom'; // Import MemoryRouter
+import Main from '../components/Main'; 
+import { MemoryRouter } from 'react-router-dom'
 
 // Mock localStorage
 beforeAll(() => {
@@ -19,15 +19,13 @@ test('should store bookingDetails in localStorage on form submit', () => {
     </MemoryRouter>
   );
 
-  // Check if localStorage.setItem was called with the correct key 'bookingDetails'
-  expect(localStorage.setItem).toHaveBeenCalledWith(
+    expect(localStorage.setItem).toHaveBeenCalledWith(
     'bookingDetails',
-    expect.any(String) // We expect it to be a string (JSON)
+    expect.any(String) 
   );
 
-  // Check if 'bookingDetails' is in localStorage
   expect(localStorage.setItem).toHaveBeenCalledWith(
     'bookingDetails',
-    expect.stringContaining('destination') // Check if destination is part of the stored value
+    expect.stringContaining('destination') 
   );
 });

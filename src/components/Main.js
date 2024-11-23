@@ -70,10 +70,10 @@ function Main() {
   const submitForm = async (event) => {
     event.preventDefault(); 
     try {
-      const response = await submitAPI(booking); // Pass the booking data
+      const response = await submitAPI(booking); 
       if (response) {
         localStorage.setItem('bookingDetails', JSON.stringify(booking));
-        navigate('/confirmation'); // Navigate to confirmation page
+        navigate('/confirmation'); 
       } else {
         alert('Booking failed! Please try again.');
       }
